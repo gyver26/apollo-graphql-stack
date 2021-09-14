@@ -11,6 +11,7 @@ module.exports = {
         pageSize,
         results: allLaunches,
       });
+      console.log(launches[launches.length - 1]);
       return {
         launches,
         cursor: launches.length ? launches[launches.length - 1].cursor : null,

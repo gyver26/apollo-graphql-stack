@@ -13,7 +13,6 @@ module.exports.paginateResults = ({
   const cursorIndex = results.findIndex((item) => {
     // if an item has a `cursor` on it, use that, otherwise try to generate one
     let itemCursor = item.cursor ? item.cursor : getCursor(item);
-
     // if there's still not a cursor, return false by default
     return itemCursor ? cursor === itemCursor : false;
   });
